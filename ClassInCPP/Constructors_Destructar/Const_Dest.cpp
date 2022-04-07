@@ -1,6 +1,15 @@
 #include <iostream>
 using namespace std;
 // write automatic array initialization
+/* constructor are static member function , which doesn't have a return type but it can return , it is implicitly call when we create a instance of the class.
+    >initializer list to initialize the data member of the class.
+    >constructor can be overloaded.
+    >
+
+
+
+  */
+
 class stack
 {
 private:
