@@ -1,8 +1,8 @@
 /*
     In this we are going to take a example of static data member.
        we have printer, and has a variable nPages_ (pages in current job)
-         and a static variable nTrayPages_(page remaining in the tray)
-         and a static variable nJobs_(print jobs executing)
+        and a static variable nTrayPages_(page remaining in the tray)
+        and a static variable nJobs_(print jobs executing)
  */
 #include <iostream>
 using namespace std;
