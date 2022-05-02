@@ -75,3 +75,58 @@ int main()
     c3.display();
     return 0;
 }
+// output:img21.png
+
+// >>here we have to put data member in public so that global function can access it because of that it is breaking encapsulation.
+
+//--------------------Example2(using member function)--------------------
+
+#include <iostream>
+using namespace std;
+
+class complex
+{
+public:
+    double real, imag;
+    complex(double r = 0, double i = 0)
+    {
+        real = r;
+        imag = i;
+    }
+    ~complex() {}
+    void display();
+    double getreal()
+    {
+        return real;
+    }
+    double getimag()
+    {
+        return imag;
+    }
+    void setreal(double r)
+    {
+        real = r;
+    }
+    void setimg(double i)
+    {
+        imag = i;
+    }
+    complex operator+(complex a) // member function
+    {
+        complex c;
+        c.real = real + a.real;
+        c.imag = imag + a.imag;
+        return c;
+    }
+};
+void complex::display()
+{
+    cout << real << "+" << imag << "i" << endl;
+}
+int main()
+{
+    complex c1(1, 2), c2(3, 4), c3;
+    c3 = c1 + c2;
+    c3.display();
+    return 0;
+}
